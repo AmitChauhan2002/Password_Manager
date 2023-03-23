@@ -36,7 +36,7 @@ windows.config(padx=50,pady=50)
 windows.title("Password Manager")
 
 canvas = Canvas(height=200,width=200)
-logoImage = PhotoImage(file="C:/Users/Amit Chauhan/Desktop/100_Days_Python/Day_29/PasswordManager/logo.png")
+logoImage = PhotoImage(file="Enter your image path here (convert all backword slash to forward slash) ")
 logo = canvas.create_image(100,100,image = logoImage)
 canvas.grid(row=0,column=1)
 
@@ -109,7 +109,7 @@ def save():
     else:
         is_ok = messagebox.askokcancel(title=WebsiteEntry.get(),message=f"These are the datails entered: \nEmail: {EmailEntry.get()} \nPassword: {PasswordEntry.get()} \nIs it ok to save")
         if is_ok:
-            with open("C:/Users/Amit Chauhan/Desktop/100_Days_Python/Day_29/PasswordManager/password.txt",mode="a") as file:
+            with open("Enter your file path here (convert all backword slash to forward slash)",mode="a") as file:
                 encodeData = messagebox.askyesno("Encode Data",message="Would you like to encode the data before saving")
                 if encodeData == True:
                     file.write(f"\n{encrypt_decrypt(WebsiteEntry.get())} | {encrypt_decrypt(EmailEntry.get())} | {encrypt_decrypt(PasswordEntry.get())}")
